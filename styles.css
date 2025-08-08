@@ -180,7 +180,21 @@ body {
 
 .hero-visual {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero-image {
+  max-width: 400px;
+  width: 100%;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .stats {
@@ -242,6 +256,18 @@ body {
   margin-bottom: 1rem;
 }
 
+.card-image {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.card-image img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
 .card-title {
   font-size: 1.25rem;
   font-weight: 600;
@@ -269,10 +295,13 @@ body {
   display: flex;
   align-items: flex-start;
   margin-bottom: 1.5rem;
-  padding: 1rem;
+  padding: 1.5rem;
   background: white;
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .check {
@@ -301,9 +330,84 @@ body {
   font-weight: 500;
 }
 
+/* Offers section */
+.offers {
+  background: #f8fafc;
+}
+
+.offer-card {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.offer-icon {
+  font-size: 3rem;
+  margin-right: 2rem;
+  flex-shrink: 0;
+}
+
+.offer-image {
+  margin-right: 2rem;
+  flex-shrink: 0;
+}
+
+.offer-image img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.offer-content {
+  flex: 1;
+}
+
+.offer-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.offer-text {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.offer-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: #10b981;
+  color: white;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
 /* Steps section */
 .steps {
   background: white;
+}
+
+.steps-visual {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.steps-visual img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
 }
 
 .steps-list {
@@ -475,7 +579,11 @@ body {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
+  .hero-image {
+    max-width: 300px;
+  }
+
   .cta-row {
     flex-direction: column;
   }
@@ -486,6 +594,11 @@ body {
   
   .card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .card-image img {
+    width: 60px;
+    height: 60px;
   }
   
   .steps-list li {
@@ -500,6 +613,21 @@ body {
   
   .quiz-actions {
     flex-direction: column;
+  }
+  
+  .offer-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .offer-image {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .offer-image img {
+    width: 80px;
+    height: 80px;
   }
 }
 
